@@ -1,28 +1,163 @@
-# TaskManagementSystemFe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+# Task Management System - Frontend
 
-## Development server
+This repository contains the frontend for the Task Management System, a web application built with Angular 15+ that allows users to manage tasks with an advanced authentication and role-based access control system. The application features a dynamic, interactive dashboard and complete CRUD operations for tasks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **User Authentication & Authorization (in progress)**: Login and registration with JWT-based session management. Role-based access (Admin and User) with protected routes.
+- **Task Dashboard**: Interactive charts displaying task statistics (e.g., status distribution and task assignment per user) using `ngx-charts` or `Chart.js`.
+- **Task Management (in progress)**: Full CRUD operations for tasks with filtering and search options.
+- **Role-based Layouts (in progress)**: Different layouts for Admin and User roles.
+- **Lazy Loading (in progress)**: Optimized module loading for faster application performance.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
 
-## Build
+- **Frontend Framework**: Angular 15+
+- **Charting Library**: ngx-charts (or Chart.js)
+- **Authentication (in progress)**: JWT for session management
+- **HTTP Client**: Angular HttpClient for communication with the backend API
+- **Testing (in progress)**: Jasmine and Karma for unit tests
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+### Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Node.js** (version 16 or higher recommended)
+- **Angular CLI** (version 15 or higher)
 
-## Running end-to-end tests
+### Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone the repository:
 
-## Further help
+   ```bash
+   git clone https://github.com/yourusername/task-management-frontend.git
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# task-management-system-fe
+2. Navigate to the project directory:
+
+   ```bash
+   cd task-management-frontend
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Configuration
+
+- Open `src/environments/environment.ts` and configure the backend API URL:
+
+  ```typescript
+  export const environment = {
+    production: false,
+    apiUrl: 'http://localhost:8080/api' // Backend API URL
+  };
+  ```
+
+### Running the Application
+
+To start the application in development mode:
+
+```bash
+ng serve
+```
+
+Navigate to `http://localhost:4200` in your browser.
+
+### Building for Production
+
+To build the project for production:
+
+```bash
+ng build --prod
+```
+
+The production-ready files will be generated in the `dist/` directory.
+
+## Project Structure
+
+- **/src/app/core** - Contains core services (authentication (in progress), task service) and route guards.
+- **/src/app/shared** - Shared components, models, and utilities used across the app.
+- **/src/app/features** - Contains feature modules like `dashboard` and `task` (in progress).
+- **/src/app/auth (in progress)** - Authentication module with login, registration, and route guards.
+
+## Usage
+
+### Authentication and Authorization (in progress)
+
+- Users can register and log in.
+- JWT tokens are stored in `localStorage` and used to protect routes and manage session expiration.
+- Admin and User roles have different access permissions.
+
+### Dashboard
+
+- Interactive charts display task statistics, such as:
+  - Task completion status (e.g., completed, in progress, not started)
+  - Task assignment by user
+- The dashboard connects to backend endpoints to fetch aggregated data.
+
+### Task Management (in progress)
+
+- Users can create, update, delete, and search for tasks.
+- Filters allow viewing tasks by status, priority, or due date.
+- Admins have additional permissions for advanced task management.
+
+## Testing (in progress)
+
+Run unit tests using Karma and Jasmine:
+
+```bash
+ng test
+```
+
+## Deployment (in progress)
+
+To deploy the frontend, ensure you have set up the correct production backend API URL in `environment.prod.ts` and then build the app:
+
+```bash
+ng build --prod
+```
+
+Upload the `dist/` folder contents to your web server.
+
+## Docker Support (Optional) (in progress)
+
+For Docker deployment, create a Dockerfile to containerize the Angular app:
+
+```dockerfile
+# Dockerfile
+FROM node:16-alpine AS build
+WORKDIR /app
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build --prod
+
+FROM nginx:alpine
+COPY --from=build /app/dist/task-management-frontend /usr/share/nginx/html
+EXPOSE 80
+```
+
+Then, build and run the container:
+
+```bash
+docker build -t task-management-frontend .
+docker run -d -p 80:80 task-management-frontend
+```
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Special thanks to all contributors and open-source projects that made this application possible.
+
+---
+
+### Note
+
+This is the frontend for the Task Management System. Make sure to set up and start the [backend repository](https://github.com/yourusername/task-management-backend) before running the frontend.
