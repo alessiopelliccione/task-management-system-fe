@@ -48,19 +48,19 @@
   "taskAssignment": [
     {
       "name": "John Doe",
-      "taskCount": 3
+      "value": 3
     },
     {
       "name": "Jane Smith",
-      "taskCount": 3
+      "value": 3
     },
     {
       "name": "Emily Johnson",
-      "taskCount": 2
+      "value": 2
     },
     {
       "name": "Michael Brown",
-      "taskCount": 2
+      "value": 2
     }
   ]
 }
