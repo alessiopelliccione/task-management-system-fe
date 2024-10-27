@@ -1,0 +1,49 @@
+/* Chart Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling with animation */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ngx-charts pie chart styling */
+ngx-charts-pie-chart {
+    width: 100%;
+    height: auto;
+}
+
+/* Legend styling */
+.legend-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Slice Styling */
+path.arc {
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+path.arc:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+/* Tooltip styling */
+.ngx-charts-tooltip {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
