@@ -14,6 +14,11 @@ import { Router, RouterModule } from '@angular/router';
 export class ManagementComponent implements OnInit {
 
   tasks: Task[] = [];
+  status: Record<string, string> = {
+    IN_PROGRESS: 'in progress',
+    DONE: 'Done'
+  }
+
 
   constructor(private taskService: TaskService) { }
 
@@ -33,10 +38,14 @@ export class ManagementComponent implements OnInit {
     })
   }
 
-  markAsDone(id: number) {
+  changeStatus(id: number) {
     const newTask = this.tasks.find(task => task.id == id);
     if (newTask) {
-      newTask.status = "Completed";
+      if (newTask.status === this.status['IN_PROGRESS']) {
+        newTask.status = this.status['DONE'];
+      } else {
+        newTask.status = this.status['IN_PROGRESS'];
+      }
       this.taskService.updateTask(id, newTask).subscribe();
     }
   }
