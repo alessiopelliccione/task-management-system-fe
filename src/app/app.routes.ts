@@ -4,6 +4,11 @@ import { ManagementComponent } from './features/management/management.component'
 
 export const routes: Routes = [
     {
+        path: '',
+        redirectTo: 'dashboard',
+        pathMatch: 'full'
+    },
+    {
         path: 'dashboard',
         component: DashboardComponent,
     },
