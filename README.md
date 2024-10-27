@@ -51,11 +51,23 @@ This repository contains the frontend for the Task Management System, a web appl
 - Open `src/environments/environment.ts` and configure the backend API URL:
 
   ```typescript
-  export const environment = {
+  export const enviroment = {
     production: false,
-    apiUrl: 'http://localhost:8080/api' // Backend API URL
+    apiUrl: 'http://localhost:3000' // Backend API URL
   };
   ```
+
+- Install `json-server` to use a mock database for local testing:
+
+```bash
+npm install -g json-server
+```
+
+- Start `json-server`:
+
+```bash
+json-server --watch db.json --port 8080
+```
 
 ### Running the Application
 
