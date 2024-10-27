@@ -1,0 +1,88 @@
+/* Container Styling */
+.task-container {
+    max-width: 700px;
+    margin: auto;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Task List Items */
+.task-item {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.task-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Actions Styling */
+.task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.animate-hover {
+    transition: all 0.3s ease;
+}
+
+.animate-hover:hover {
+    transform: translateY(-3px);
+}
+
+.btn-danger {
+    background-color: #ff5f5f;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #e04848;
+}
+
+.btn-primary {
+    background-color: #5f9eff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #4a86e0;
+}
+
+.btn-success {
+    background-color: #4caf50;
+    font-size: 16px;
+}
+
+.btn-success:hover {
+    background-color: #429842;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
