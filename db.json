@@ -1,52 +1,66 @@
 {
-    "users": [
-        {
-            "id": "1",
-            "email": "user@example.com",
-            "password": "password123"
-        },
-        {
-            "id": "2",
-            "email": "admin@example.com",
-            "password": "adminpass"
-        }
-    ],
-    "login": [
-        {
-            "token": "abcde",
-            "id": "68ab"
-        }
-    ],
-    "taskStatus": [
-        {
-            "name": "completed",
-            "value": 19
-        },
-        {
-            "name": "in progress",
-            "value": 2
-        },
-        {
-            "name": "not started",
-            "value": 4
-        }
-    ],
-    "taskAssignment": [
-        {
-            "name": "John Doe",
-            "value": 3
-        },
-        {
-            "name": "Jane Smith",
-            "value": 3
-        },
-        {
-            "name": "Emily Johnson",
-            "value": 2
-        },
-        {
-            "name": "Michael Brown",
-            "value": 2
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "email": "user@example.com",
+      "password": "password123",
+      "roleType": "user"
+    },
+    {
+      "id": "2",
+      "email": "admin@example.com",
+      "password": "adminpass",
+      "roleType": "admin"
+    }
+  ],
+  "login": [
+    {
+      "token": "abcde",
+      "userId": "1"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "name": "Task A",
+      "description": "Description for Task A"
+    },
+    {
+      "id": "2",
+      "name": "Task B",
+      "description": "Description for Task B"
+    }
+  ],
+  "taskStatus": [
+    {
+      "name": "completed",
+      "value": 19
+    },
+    {
+      "name": "in_progress",
+      "value": 2
+    },
+    {
+      "name": "not_started",
+      "value": 4
+    }
+  ],
+  "taskAssignment": [
+    {
+      "name": "John Doe",
+      "taskCount": 3
+    },
+    {
+      "name": "Jane Smith",
+      "taskCount": 3
+    },
+    {
+      "name": "Emily Johnson",
+      "taskCount": 2
+    },
+    {
+      "name": "Michael Brown",
+      "taskCount": 2
+    }
+  ]
 }
