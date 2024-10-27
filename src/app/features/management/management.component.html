@@ -3,12 +3,16 @@
     <ul class="list-group">
         <li *ngFor="let task of tasks"
             class="list-group-item task-item d-flex justify-content-between align-items-center">
-            <span>{{ task.name }} - {{ task.description }}</span>
+            <span>{{ task.name }} - {{ task.description }} - {{task.status}}</span>
             <div class="task-actions">
                 <button class="btn btn-danger btn-sm shadow-sm animate-hover"
                     (click)="deleteTask(task.id)">Delete</button>
                 <a class="btn btn-primary btn-sm shadow-sm animate-hover ms-2"
                     [routerLink]="['/tasks/edit', task.id]">Edit</a>
+                <span *ngIf="task.status === 'in progress'">
+                    <a class="btn btn-success btn-sm shadow-sm animate-hover ms-2"
+                        (click)="markAsDone(task.id)">Done</a>
+                </span>
             </div>
         </li>
     </ul>

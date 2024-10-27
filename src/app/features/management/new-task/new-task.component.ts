@@ -26,6 +26,7 @@ export class NewTaskComponent {
   onSubmit() {
     if(this.taskForm.valid) {
       const task: Task = this.taskForm.value;
+      task.status = "in progress";
       this.taskService.createTask(task).subscribe();
       this.taskForm.reset();
     }

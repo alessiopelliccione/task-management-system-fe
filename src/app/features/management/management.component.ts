@@ -33,4 +33,12 @@ export class ManagementComponent implements OnInit {
     })
   }
 
+  markAsDone(id: number) {
+    const newTask = this.tasks.find(task => task.id == id);
+    if (newTask) {
+      newTask.status = "Completed";
+      this.taskService.updateTask(id, newTask).subscribe();
+    }
+  }
+
 }
