@@ -59,15 +59,15 @@ This repository contains the frontend for the Task Management System, a web appl
 
 - Install `json-server` to use a mock database for local testing:
 
-```bash
-npm install -g json-server
-```
+  ```bash
+  npm install -g json-server
+  ```
 
 - Start `json-server`:
 
-```bash
-json-server --watch db.json --port 8080
-```
+  ```bash
+  json-server --watch db.json --port 8080
+  ```
 
 ### Running the Application
 
