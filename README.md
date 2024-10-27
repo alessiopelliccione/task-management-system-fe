@@ -6,15 +6,15 @@ This repository contains the frontend for the Task Management System, a web appl
 ## Features
 
 - **User Authentication & Authorization (in progress)**: Login and registration with JWT-based session management. Role-based access (Admin and User) with protected routes.
-- **Task Dashboard**: Interactive charts displaying task statistics (e.g., status distribution and task assignment per user) using `ngx-charts` or `Chart.js`.
-- **Task Management (in progress)**: Full CRUD operations for tasks with filtering and search options.
+- **Task Dashboard**: Interactive charts displaying task statistics (e.g., status distribution and task assignment per user) using `ngx-charts`.
+- **Task Management**: Full CRUD operations for tasks.
 - **Role-based Layouts (in progress)**: Different layouts for Admin and User roles.
 - **Lazy Loading (in progress)**: Optimized module loading for faster application performance.
 
 ## Technologies
 
 - **Frontend Framework**: Angular 15+
-- **Charting Library**: ngx-charts (or Chart.js)
+- **Charting Library**: ngx-charts
 - **Authentication (in progress)**: JWT for session management
 - **HTTP Client**: Angular HttpClient for communication with the backend API
 - **Testing (in progress)**: Jasmine and Karma for unit tests
@@ -99,11 +99,10 @@ The production-ready files will be generated in the `dist/` directory.
   - Task assignment by user
 - The dashboard connects to backend endpoints to fetch aggregated data.
 
-### Task Management (in progress)
+### Task Management
 
-- Users can create, update, delete, and search for tasks.
-- Filters allow viewing tasks by status, priority, or due date.
-- Admins have additional permissions for advanced task management.
+- Users can create, update, delete for tasks.
+- Admins have additional permissions for advanced task management. (in progress)
 
 ## Testing (in progress)
 
