@@ -29,7 +29,7 @@ export class TaskService {
   }
 
   createTask(task: Task): Observable<any> {
-    return this.http.post<any>(this.apiUrl, task);
+    return this.http.post<any>(`${this.apiUrl}/tasks`, task);
   }
 
 

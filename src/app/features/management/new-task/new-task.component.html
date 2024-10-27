@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <h2>Add New Task</h2>
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label for="taskName" class="form-label">Task Name</label>
+            <input type="text" id="taskName" class="form-control" formControlName="name"
+                placeholder="Enter task name" />
+            <div *ngIf="taskForm.get('name')?.invalid && taskForm.get('name')?.touched" class="text-danger">
+                Name is required.
+            </div>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="taskDescription" class="form-label">Task Description</label>
+            <textarea id="taskDescription" class="form-control" formControlName="description" rows="4"
+                placeholder="Enter task description"></textarea>
+            <div *ngIf="taskForm.get('description')?.invalid && taskForm.get('description')?.touched"
+                class="text-danger">
+                Description is required.
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 mt-2" [disabled]="taskForm.invalid">
+            Add Task
+        </button>
+        <button class="btn btn-success w-100 mt-2" routerLink="/management">
+            Go to Management
+        </button>
+    </form>
+</div>
