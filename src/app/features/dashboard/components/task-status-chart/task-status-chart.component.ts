@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { TaskService } from '../../../../core/services/task.service';
+import { TaskService } from '../../../../core/services/task/task.service';
 
 @Component({
   selector: 'app-task-status-chart',

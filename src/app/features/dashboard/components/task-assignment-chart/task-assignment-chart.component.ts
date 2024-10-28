@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from '../../../../core/services/task.service';
+import { TaskService } from '../../../../core/services/task/task.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @Component({

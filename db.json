@@ -2,13 +2,13 @@
   "users": [
     {
       "id": "1",
-      "email": "user@example.com",
+      "username": "user",
       "password": "password123",
       "roleType": "user"
     },
     {
       "id": "2",
-      "email": "admin@example.com",
+      "username": "admin",
       "password": "adminpass",
       "roleType": "admin"
     }
@@ -21,10 +21,16 @@
   ],
   "tasks": [
     {
-      "id": "0315",
-      "name": "test",
-      "description": "test",
-      "status": "DONE"
+      "id": "dca6",
+      "name": "Task 1",
+      "description": "Description 1",
+      "status": "in progress"
+    },
+    {
+      "id": "d57e",
+      "name": "Task 2",
+      "description": "Description 2",
+      "status": "Done"
     }
   ],
   "taskStatus": [

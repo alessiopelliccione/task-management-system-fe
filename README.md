@@ -5,7 +5,7 @@ This repository contains the frontend for the Task Management System, a web appl
 
 ## Features
 
-- **User Authentication & Authorization (in progress)**: Login and registration with JWT-based session management. Role-based access (Admin and User) with protected routes.
+- **User Authentication & Authorization**: Login and registration with JWT-based session management. Role-based access (Admin and User) with protected routes.
 - **Task Dashboard**: Interactive charts displaying task statistics (e.g., status distribution and task assignment per user) using `ngx-charts`.
 - **Task Management**: Full CRUD operations for tasks.
 - **Role-based Layouts (in progress)**: Different layouts for Admin and User roles.
@@ -98,7 +98,7 @@ The production-ready files will be generated in the `dist/` directory.
 
 ## Usage
 
-### Authentication and Authorization (in progress)
+### Authentication and Authorization
 
 - Users can register and log in.
 - JWT tokens are stored in `localStorage` and used to protect routes and manage session expiration.

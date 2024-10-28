@@ -1,15 +1,20 @@
 <div>
   <div class="container my-5">
+
+    <div class="d-flex justify-content-end">
+      <a (click)="logout()" class="text-danger text-decoration-none me-3" style="cursor: pointer;">Logout</a>
+    </div>
+
     <h1 class="text-center mt-4 display-4 font-weight-bold">Welcome to the Task Management System</h1>
     <h2 class="text-center text-muted">
-      Developed by 
-      <span class="fw-semibold">Alessio Pelliccione</span> - 
+      Developed by
+      <span class="fw-semibold">Alessio Pelliccione</span> -
       <a href="https://github.com/alessiopelliccione" target="_blank" class="text-decoration-none text-primary">
         Visit GitHub Profile
       </a>
     </h2>
   </div>
-  
+
   <h3 class="text-center mt-4">Task status</h3>
   <app-task-status-chart></app-task-status-chart>
 

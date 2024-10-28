@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 login-card">
+        <h3 class="card-title text-center mb-3">Login</h3>
+        <form (ngSubmit)="login()" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control"
+                    placeholder="Enter username" #usernameInput="ngModel" required />
+                <div *ngIf="usernameInput.invalid && usernameInput.touched" class="text-danger">
+                    Username is required
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control"
+                    placeholder="Enter password" #passwordInput="ngModel" required />
+                <div *ngIf="passwordInput.invalid && passwordInput.touched" class="text-danger">
+                    Password is required
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" [disabled]="!username || !password">Login</button>
+        </form>
+    </div>
+</div>
