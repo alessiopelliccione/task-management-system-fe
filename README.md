@@ -15,7 +15,7 @@ This repository contains the frontend for the Task Management System, a web appl
 
 - **Frontend Framework**: Angular 15+
 - **Charting Library**: ngx-charts
-- **Authentication (in progress)**: JWT for session management
+- **Authentication**: JWT for session management
 - **HTTP Client**: Angular HttpClient for communication with the backend API
 - **Testing (in progress)**: Jasmine and Karma for unit tests
 
@@ -91,9 +91,9 @@ The production-ready files will be generated in the `dist/` directory.
 
 ## Project Structure
 
-- **/src/app/core** - Contains core services (authentication (in progress), task service) and route guards.
+- **/src/app/core** - Contains core services.
 - **/src/app/shared** - Shared components, models, and utilities used across the app.
-- **/src/app/features** - Contains feature modules like `dashboard` and `task` (in progress).
+- **/src/app/features** - Contains feature modules like `dashboard` and `task`.
 - **/src/app/auth** - Authentication module with login, registration, and route guards.
 
 ## Usage
