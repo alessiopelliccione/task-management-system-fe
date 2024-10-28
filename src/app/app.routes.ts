@@ -3,7 +3,7 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { ManagementComponent } from './features/management/management.component';
 import { NewTaskComponent } from './features/management/new-task/new-task.component';
 import { LoginComponent } from './features/login/login.component';
-import { AuthGuardService } from './core/services/auth-guard/auth-guard.service';
+import { AuthGuardService } from './auth/auth-guard/auth-guard.service';
 
 export const routes: Routes = [
     {

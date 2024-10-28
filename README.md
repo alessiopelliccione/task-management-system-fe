@@ -94,7 +94,7 @@ The production-ready files will be generated in the `dist/` directory.
 - **/src/app/core** - Contains core services (authentication (in progress), task service) and route guards.
 - **/src/app/shared** - Shared components, models, and utilities used across the app.
 - **/src/app/features** - Contains feature modules like `dashboard` and `task` (in progress).
-- **/src/app/auth (in progress)** - Authentication module with login, registration, and route guards.
+- **/src/app/auth** - Authentication module with login, registration, and route guards.
 
 ## Usage
 
