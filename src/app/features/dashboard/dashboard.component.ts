@@ -18,5 +18,9 @@ export class DashboardComponent {
     this.authService.logout();
   }
 
+  isAdmin(): boolean {
+    return localStorage.getItem('roleType') === 'admin' ? true : false;
+  }
+
 }
 

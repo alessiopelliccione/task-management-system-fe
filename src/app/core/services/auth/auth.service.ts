@@ -24,6 +24,7 @@ export class AuthService {
         if (users.length > 0) {
           const token = this.generateToken(users[0].username);
           localStorage.setItem('token', token);
+          localStorage.setItem('roleType', users[0].roleType);
           return true;
         }
         return false;
@@ -42,6 +43,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('roleType');
     this.router.navigate(['/login']);
   }
 

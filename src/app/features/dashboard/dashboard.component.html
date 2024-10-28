@@ -5,7 +5,7 @@
       <a (click)="logout()" class="text-danger text-decoration-none me-3" style="cursor: pointer;">Logout</a>
     </div>
 
-    <h1 class="text-center mt-4 display-4 font-weight-bold">Welcome to the Task Management System</h1>
+    <h1 class="text-center mt-4 display-4 font-weight-bold">Hello {{ isAdmin() ? 'admin' : 'user'}}! Welcome to the Task Management System</h1>
     <h2 class="text-center text-muted">
       Developed by
       <span class="fw-semibold">Alessio Pelliccione</span> -
