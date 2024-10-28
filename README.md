@@ -171,4 +171,4 @@ Special thanks to all contributors and open-source projects that made this appli
 
 ### Note
 
-This is the frontend for the Task Management System. Make sure to set up and start the [backend repository](https://github.com/yourusername/task-management-backend) before running the frontend.
+This is the frontend for the Task Management System. Make sure to set up and start the [backend repository](https://github.com/alessiopelliccione/task-management-system-be) before running the frontend.
