@@ -16,7 +16,7 @@ export class ManagementComponent implements OnInit {
   tasks: Task[] = [];
   status: Record<string, string> = {
     IN_PROGRESS: 'in progress',
-    DONE: 'Done'
+    DONE: 'done'
   }
 
 
