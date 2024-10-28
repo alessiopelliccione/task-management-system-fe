@@ -1,7 +1,7 @@
 
 # Task Management System - Frontend
 
-This repository contains the frontend for the Task Management System, a web application built with Angular 15+ that allows users to manage tasks with an advanced authentication and role-based access control system. The application features a dynamic, interactive dashboard and complete CRUD operations for tasks.
+This repository contains the frontend for the Task Management System, a web application built with Angular 18 that allows users to manage tasks with an advanced authentication and role-based access control system. The application features a dynamic, interactive dashboard and complete CRUD operations for tasks.
 
 ## Features
 
